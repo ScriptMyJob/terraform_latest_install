@@ -25,7 +25,7 @@ get_version(){
 
 download_latest(){
     VERSION="$1"
-    rm -f /tmp/terraform_latest.zip
+    rm -f /tmp/terraform_latest.zip || true
     wget -O /tmp/terraform_latest.zip https://releases.hashicorp.com/terraform/${VERSION}/terraform_${VERSION}_linux_amd64.zip
 }
 
